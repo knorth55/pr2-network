@@ -1,10 +1,13 @@
-pr2-network (0.5.73-precise) stable; urgency=low
+pr2-network (0.5.73-xenial) stable; urgency=low
 
+  [ Austin Hendrix ]
   * Incrementing to SVN: r1241
    - r1240: Speed up networking on boot.
    - r1241: Add rules for failsafe.conf
 
- -- Austin Hendrix <ahendrix@willowgarage.com>  Mon, 23 Sep 2013 18:07:07 -0700
+  [ David Feil-Seifer ]
+
+ -- David Feil-Seifer <dave@cse.unr.edu>  Thu, 19 Apr 2018 16:55:58 -0700
 
 pr2-network (0.5.72-precise) stable; urgency=low
 
