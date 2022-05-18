@@ -12,14 +12,14 @@ case "$1" in
 	BASESTATION_IP=`gethostip -d basestation` || 
 	BASESTATION_IP="10.0.0.1"
 
-	BASESTATION_HOSTNAME=`python -c """
+	BASESTATION_HOSTNAME=`python3 -c """
 with open('/etc/hosts') as f:
     res = f.read()
     for r in res.split('\n'):
         if '10.68.255.1' in r:
-            print r.replace('10.68.255.1', '').strip(' ')
+            print(r.replace('10.68.255.1', '').strip(' '))
             exit(0)
-    print '"basestation_hostname_not_found"'
+    print('"basestation_hostname_not_found"')
 """`
 
 	mkdir -p /tmp/pr2-network

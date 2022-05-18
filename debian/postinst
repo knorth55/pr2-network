@@ -39,12 +39,12 @@ case "$1" in
     echo "Checking if robot can be branded"
     if [ -e /unionfs/overlay/etc/hostname -a -e /tmp/pr2-network/BASESTATION_IP -a -e /tmp/pr2-network/BASESTATION_HOSTNAME ]; then
 	echo "Yes, let's brand the robot"
-        ROBOT_NAME=`python -c """
+        ROBOT_NAME=`python3 -c """
 import yaml
 try:
-  print yaml.load(open('/etc/ros/robot.yaml'))['robot']['name']
+    print(yaml.load(open('/etc/ros/robot.yaml'))['robot']['name'])
 except:
-  print 'robot'
+    print('robot')
 """`
         C1_NAME=`cat /etc/hostname`
         C2_NAME=`cat /unionfs/overlay/etc/hostname`
