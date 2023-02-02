@@ -1,0 +1,7 @@
+debian/.debhelper/*
+debian/files
+debian/pr2-network.debhelper.log
+debian/pr2-network.postinst.debhelper
+debian/pr2-network.prerm.debhelper
+debian/pr2-network.substvars
+debian/pr2-network/*
